@@ -3,7 +3,7 @@
 Automatically updated collection of high-quality wallpapers from official Linux Mint background packages.
 
 <p align="center">
-  <a href="mint-backgrounds/"><img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=%24.latest_mint_release&label=Linux Mint&color=87cf3e&style=for-the-badge" alt="Latest Mint"></a>
+  <a href="mint-backgrounds/"><img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=%24.latest_mint_release&label=Linux%20Mint&color=87cf3e&style=for-the-badge" alt="Latest Mint"></a>
   <a href="mint-backgrounds/"><img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=%24.total_images&label=Wallpapers&color=blueviolet&style=for-the-badge" alt="Total Images"></a>
   <a href="../../releases"><img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=%24.total_size_mb&label=Size&suffix=%20MB&color=orange&style=for-the-badge" alt="Collection Size"></a>
   <a href="../../releases"><img src="https://img.shields.io/github/downloads/392781/mint-backgrounds/total?style=for-the-badge&color=blue" alt="Downloads"></a>
