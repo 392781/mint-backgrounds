@@ -198,6 +198,12 @@
       "size": "64.3M",
       "downloaded_at": "2026-01-19T08:41:41.949201"
     },
+    "wilma_1.1": {
+      "name": "mint-backgrounds-wilma_1.1.tar.gz",
+      "version": "1.1",
+      "size": "58.8M",
+      "downloaded_at": "2026-01-19T18:51:55.167711"
+    },
     "xfce_2012.06.21": {
       "name": "mint-backgrounds-xfce_2012.06.21.tar.gz",
       "version": "2012.06.21",
@@ -211,5 +217,10 @@
       "downloaded_at": "2026-01-19T08:41:48.185524"
     }
   },
-  "last_checked": "2026-01-19T08:51:25.739134"
+  "last_checked": "2026-01-19T18:51:55.167872",
+  "total_packages": 36,
+  "total_images": 672,
+  "total_size_mb": 1132.1,
+  "latest_mint_release": "Wilma",
+  "latest_mint_version": 22
 }

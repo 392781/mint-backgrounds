@@ -42,8 +42,53 @@ def load_versions() -> dict:
 
 
 def save_versions(data: dict):
-    """Save the versions.json file."""
+    """Save the versions.json file with summary statistics."""
     data["last_checked"] = datetime.utcnow().isoformat()
+    
+    # Calculate summary statistics
+    data["total_packages"] = len(data.get("packages", {}))
+    
+    # Count images and calculate total size
+    total_images = 0
+    total_size_bytes = 0
+    image_extensions = {'.jpg', '.jpeg', '.png', '.svg'}
+    
+    # Mint release names mapped to version numbers
+    mint_releases = {
+        'katya': 11, 'lisa': 12, 'maya': 13, 'nadia': 14, 'olivia': 15,
+        'petra': 16, 'qiana': 17, 'rafaela': 17.1, 'rebecca': 17.2,
+        'rosa': 17.3, 'sarah': 18, 'serena': 18.1, 'sonya': 18.2,
+        'sylvia': 18.3, 'tara': 19, 'tessa': 19.1, 'tina': 19.2,
+        'tricia': 19.3, 'ulyana': 20, 'ulyssa': 20.1, 'uma': 20.2,
+        'una': 20.3, 'vanessa': 21, 'vera': 21.1, 'victoria': 21.2,
+        'virginia': 21.3, 'wilma': 22
+    }
+    
+    latest_name = None
+    latest_version = 0
+    
+    if os.path.exists(OUTPUT_DIR):
+        for item in os.listdir(OUTPUT_DIR):
+            item_path = os.path.join(OUTPUT_DIR, item)
+            if os.path.isdir(item_path):
+                name = item.lower()
+                if name in mint_releases and mint_releases[name] > latest_version:
+                    latest_version = mint_releases[name]
+                    latest_name = item.capitalize()
+                
+                # Count images in this directory
+                for file in os.listdir(item_path):
+                    ext = os.path.splitext(file)[1].lower()
+                    if ext in image_extensions:
+                        total_images += 1
+                        filepath = os.path.join(item_path, file)
+                        total_size_bytes += os.path.getsize(filepath)
+    
+    data["total_images"] = total_images
+    data["total_size_mb"] = round(total_size_bytes / (1024 * 1024), 1)
+    data["latest_mint_release"] = latest_name
+    data["latest_mint_version"] = latest_version
+    
     with open(VERSIONS_FILE, "w") as f:
         json.dump(data, f, indent=2)
 
