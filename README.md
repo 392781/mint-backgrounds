@@ -2,11 +2,16 @@
 
 Automatically updated collection of high-quality wallpapers from official Linux Mint background packages.
 
-[![Last Checked](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=$.last_checked&label=Last%20Checked&color=brightgreen&style=for-the-badge)](../../actions)
-[![Latest Mint](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=$.latest_mint_release&label=Latest&color=87cf3e&style=for-the-badge)](mint-backgrounds/)
-[![Total Images](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=$.total_images&label=Images&color=blueviolet&style=for-the-badge)](mint-backgrounds/)
-[![Collection Size](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=$.total_size_mb&label=Size&suffix=%20MB&color=orange&style=for-the-badge)](../../releases)
-[![Downloads](https://img.shields.io/github/downloads/392781/mint-backgrounds/total?style=for-the-badge&color=blue)](../../releases)
+<p align="center">
+  <a href="mint-backgrounds/"><img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=%24.latest_mint_release&label=Linux Mint&color=87cf3e&style=for-the-badge" alt="Latest Mint"></a>
+  <a href="mint-backgrounds/"><img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=%24.total_images&label=Wallpapers&color=blueviolet&style=for-the-badge" alt="Total Images"></a>
+  <a href="../../releases"><img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=%24.total_size_mb&label=Size&suffix=%20MB&color=orange&style=for-the-badge" alt="Collection Size"></a>
+  <a href="../../releases"><img src="https://img.shields.io/github/downloads/392781/mint-backgrounds/total?style=for-the-badge&color=blue" alt="Downloads"></a>
+</p>
+
+<p align="center">
+  <a href="../../actions"><img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/392781/mint-backgrounds/main/versions.json&query=%24.last_checked&label=Last%20Checked&color=brightgreen&style=for-the-badge" alt="Last Checked"></a>
+</p>
 
 ## Features
 
