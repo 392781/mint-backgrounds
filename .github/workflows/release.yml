@@ -1,0 +1,105 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'mint-backgrounds/**'
+      - 'versions.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get version info
+        id: version
+        run: |
+          # Generate version based on date
+          VERSION="v$(date +%Y.%m.%d)"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          
+          # Count total images
+          TOTAL_IMAGES=$(find mint-backgrounds -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.svg" \) | wc -l | tr -d ' ')
+          echo "total_images=$TOTAL_IMAGES" >> $GITHUB_OUTPUT
+          
+          # Count directories
+          TOTAL_DIRS=$(ls -1 mint-backgrounds/ | wc -l | tr -d ' ')
+          echo "total_dirs=$TOTAL_DIRS" >> $GITHUB_OUTPUT
+          
+          # Get package count from versions.json
+          PACKAGE_COUNT=$(python3 -c "import json; print(len(json.load(open('versions.json'))['packages']))")
+          echo "package_count=$PACKAGE_COUNT" >> $GITHUB_OUTPUT
+
+      - name: Check if release exists
+        id: check_release
+        run: |
+          if gh release view ${{ steps.version.outputs.version }} &>/dev/null; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create zip archive
+        if: steps.check_release.outputs.exists == 'false'
+        run: |
+          # Create zip with only images and credits files
+          zip -r mint-backgrounds-${{ steps.version.outputs.version }}.zip mint-backgrounds/ \
+            -i '*.jpg' '*.jpeg' '*.png' '*.svg' '*Credits*'
+
+      - name: Generate release notes
+        if: steps.check_release.outputs.exists == 'false'
+        run: |
+          cat > release_notes.md << 'EOF'
+          # Linux Mint Backgrounds Collection
+          
+          This release contains high-quality wallpapers extracted from official Linux Mint background packages.
+          
+          ## Statistics
+          - **Total Images:** ${{ steps.version.outputs.total_images }}
+          - **Categories:** ${{ steps.version.outputs.total_dirs }}
+          - **Source Packages:** ${{ steps.version.outputs.package_count }}
+          
+          ## Categories Included
+          EOF
+          
+          ls -1 mint-backgrounds/ | while read dir; do
+            count=$(find "mint-backgrounds/$dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.svg" \) | wc -l | tr -d ' ')
+            echo "- **$dir**: $count images" >> release_notes.md
+          done
+          
+          cat >> release_notes.md << 'EOF'
+          
+          ## Usage
+          Download the zip file and extract to your wallpapers directory.
+          
+          ## Source
+          All images are sourced from the official [Linux Mint package repository](http://packages.linuxmint.com/pool/main/m/).
+          
+          ## Credits
+          Each category folder contains a `Credits_*` file with attribution information.
+          EOF
+
+      - name: Create GitHub Release
+        if: steps.check_release.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: Mint Backgrounds ${{ steps.version.outputs.version }}
+          body_path: release_notes.md
+          files: |
+            mint-backgrounds-${{ steps.version.outputs.version }}.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

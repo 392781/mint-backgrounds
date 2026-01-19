@@ -1,0 +1,215 @@
+{
+  "packages": {
+    "katya-extra_1.0.1": {
+      "name": "mint-backgrounds-katya-extra_1.0.1.tar.gz",
+      "version": "1.0.1",
+      "size": "26.5M",
+      "downloaded_at": "2026-01-19T08:40:33.404956"
+    },
+    "lisa-extra_1.1": {
+      "name": "mint-backgrounds-lisa-extra_1.1.tar.gz",
+      "version": "1.1",
+      "size": "28.8M",
+      "downloaded_at": "2026-01-19T08:40:35.033244"
+    },
+    "maya_1.5": {
+      "name": "mint-backgrounds-maya_1.5.tar.gz",
+      "version": "1.5",
+      "size": "15.5M",
+      "downloaded_at": "2026-01-19T08:40:36.227896"
+    },
+    "maya-extra_1.1": {
+      "name": "mint-backgrounds-maya-extra_1.1.tar.gz",
+      "version": "1.1",
+      "size": "15.0M",
+      "downloaded_at": "2026-01-19T08:40:37.395436"
+    },
+    "nadia_1.4": {
+      "name": "mint-backgrounds-nadia_1.4.tar.gz",
+      "version": "1.4",
+      "size": "15.7M",
+      "downloaded_at": "2026-01-19T08:40:38.531036"
+    },
+    "nadia-extra_1.0": {
+      "name": "mint-backgrounds-nadia-extra_1.0.tar.gz",
+      "version": "1.0",
+      "size": "15.5M",
+      "downloaded_at": "2026-01-19T08:40:39.820274"
+    },
+    "olivia_1.4": {
+      "name": "mint-backgrounds-olivia_1.4.tar.gz",
+      "version": "1.4",
+      "size": "14.4M",
+      "downloaded_at": "2026-01-19T08:40:41.105900"
+    },
+    "olivia_1.7": {
+      "name": "mint-backgrounds-olivia_1.7.tar.gz",
+      "version": "1.7",
+      "size": "13.2M",
+      "downloaded_at": "2026-01-19T08:40:42.375746"
+    },
+    "petra_1.7": {
+      "name": "mint-backgrounds-petra_1.7.tar.gz",
+      "version": "1.7",
+      "size": "15.4M",
+      "downloaded_at": "2026-01-19T08:40:43.500753"
+    },
+    "petra_1.4": {
+      "name": "mint-backgrounds-petra_1.4.tar.gz",
+      "version": "1.4",
+      "size": "16.4M",
+      "downloaded_at": "2026-01-19T08:40:44.686012"
+    },
+    "qiana_1.2": {
+      "name": "mint-backgrounds-qiana_1.2.tar.gz",
+      "version": "1.2",
+      "size": "24.2M",
+      "downloaded_at": "2026-01-19T08:40:46.166709"
+    },
+    "qiana_1.5": {
+      "name": "mint-backgrounds-qiana_1.5.tar.gz",
+      "version": "1.5",
+      "size": "23.3M",
+      "downloaded_at": "2026-01-19T08:40:47.628323"
+    },
+    "rafaela_1.2": {
+      "name": "mint-backgrounds-rafaela_1.2.tar.gz",
+      "version": "1.2",
+      "size": "24.8M",
+      "downloaded_at": "2026-01-19T08:40:49.648992"
+    },
+    "rebecca_1.5": {
+      "name": "mint-backgrounds-rebecca_1.5.tar.gz",
+      "version": "1.5",
+      "size": "26.4M",
+      "downloaded_at": "2026-01-19T08:40:51.995059"
+    },
+    "retro_1.3": {
+      "name": "mint-backgrounds-retro_1.3.tar.gz",
+      "version": "1.3",
+      "size": "20.4M",
+      "downloaded_at": "2026-01-19T08:40:53.660491"
+    },
+    "rosa_1.2": {
+      "name": "mint-backgrounds-rosa_1.2.tar.gz",
+      "version": "1.2",
+      "size": "27.3M",
+      "downloaded_at": "2026-01-19T08:40:56.183478"
+    },
+    "sarah_1.1": {
+      "name": "mint-backgrounds-sarah_1.1.tar.gz",
+      "version": "1.1",
+      "size": "29.5M",
+      "downloaded_at": "2026-01-19T08:40:57.851268"
+    },
+    "serena_1.1": {
+      "name": "mint-backgrounds-serena_1.1.tar.gz",
+      "version": "1.1",
+      "size": "37.4M",
+      "downloaded_at": "2026-01-19T08:40:59.809047"
+    },
+    "sonya_1.1": {
+      "name": "mint-backgrounds-sonya_1.1.tar.gz",
+      "version": "1.1",
+      "size": "29.9M",
+      "downloaded_at": "2026-01-19T08:41:01.791128"
+    },
+    "sylvia_1.2": {
+      "name": "mint-backgrounds-sylvia_1.2.tar.gz",
+      "version": "1.2",
+      "size": "39.4M",
+      "downloaded_at": "2026-01-19T08:41:04.494011"
+    },
+    "tara_1.1": {
+      "name": "mint-backgrounds-tara_1.1.tar.gz",
+      "version": "1.1",
+      "size": "39.1M",
+      "downloaded_at": "2026-01-19T08:41:07.357336"
+    },
+    "tessa_1.1": {
+      "name": "mint-backgrounds-tessa_1.1.tar.gz",
+      "version": "1.1",
+      "size": "55.9M",
+      "downloaded_at": "2026-01-19T08:41:10.279765"
+    },
+    "tina_1.2": {
+      "name": "mint-backgrounds-tina_1.2.tar.gz",
+      "version": "1.2",
+      "size": "47.1M",
+      "downloaded_at": "2026-01-19T08:41:13.926863"
+    },
+    "tricia_1.1": {
+      "name": "mint-backgrounds-tricia_1.1.tar.gz",
+      "version": "1.1",
+      "size": "54.0M",
+      "downloaded_at": "2026-01-19T08:41:16.771890"
+    },
+    "ulyana_1.1": {
+      "name": "mint-backgrounds-ulyana_1.1.tar.gz",
+      "version": "1.1",
+      "size": "44.6M",
+      "downloaded_at": "2026-01-19T08:41:19.524679"
+    },
+    "ulyssa_1.1": {
+      "name": "mint-backgrounds-ulyssa_1.1.tar.gz",
+      "version": "1.1",
+      "size": "45.2M",
+      "downloaded_at": "2026-01-19T08:41:21.998362"
+    },
+    "uma_1.2": {
+      "name": "mint-backgrounds-uma_1.2.tar.gz",
+      "version": "1.2",
+      "size": "51.1M",
+      "downloaded_at": "2026-01-19T08:41:24.945673"
+    },
+    "una_1.1": {
+      "name": "mint-backgrounds-una_1.1.tar.gz",
+      "version": "1.1",
+      "size": "45.1M",
+      "downloaded_at": "2026-01-19T08:41:27.586295"
+    },
+    "vanessa_1.1": {
+      "name": "mint-backgrounds-vanessa_1.1.tar.gz",
+      "version": "1.1",
+      "size": "44.6M",
+      "downloaded_at": "2026-01-19T08:41:30.314223"
+    },
+    "vera_1.0": {
+      "name": "mint-backgrounds-vera_1.0.tar.gz",
+      "version": "1.0",
+      "size": "41.8M",
+      "downloaded_at": "2026-01-19T08:41:32.881321"
+    },
+    "victoria_1.2": {
+      "name": "mint-backgrounds-victoria_1.2.tar.gz",
+      "version": "1.2",
+      "size": "56.2M",
+      "downloaded_at": "2026-01-19T08:41:35.666085"
+    },
+    "virginia_1.1": {
+      "name": "mint-backgrounds-virginia_1.1.tar.gz",
+      "version": "1.1",
+      "size": "62.3M",
+      "downloaded_at": "2026-01-19T08:41:38.853632"
+    },
+    "wallpapers_1.0": {
+      "name": "mint-backgrounds-wallpapers_1.0.tar.gz",
+      "version": "1.0",
+      "size": "64.3M",
+      "downloaded_at": "2026-01-19T08:41:41.949201"
+    },
+    "xfce_2012.06.21": {
+      "name": "mint-backgrounds-xfce_2012.06.21.tar.gz",
+      "version": "2012.06.21",
+      "size": "16.5M",
+      "downloaded_at": "2026-01-19T08:41:46.675638"
+    },
+    "xfce_2014.06.09": {
+      "name": "mint-backgrounds-xfce_2014.06.09.tar.gz",
+      "version": "2014.06.09",
+      "size": "24.2M",
+      "downloaded_at": "2026-01-19T08:41:48.185524"
+    }
+  },
+  "last_checked": "2026-01-19T08:51:25.739134"
+}

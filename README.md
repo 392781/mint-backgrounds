@@ -32,4 +32,3 @@ Each folder contains `Credits_*` files with original attribution.
 
 The backgrounds are distributed under their original licenses as provided by Linux Mint.
 The automation scripts in this repository are MIT licensed.
-# mint-backgrounds
