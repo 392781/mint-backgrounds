@@ -28,12 +28,15 @@ jobs:
       - name: Check for updates and download
         id: download
         run: |
-          python scripts/download_backgrounds.py
-          echo "has_updates=$?" >> $GITHUB_OUTPUT
-        continue-on-error: true
+          if python scripts/download_backgrounds.py; then
+            echo "has_updates=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_updates=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Check for changes
         id: changes
+        if: steps.download.outputs.has_updates == 'true'
         run: |
           if [[ -n $(git status --porcelain) ]]; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
