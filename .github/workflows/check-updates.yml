@@ -70,21 +70,35 @@ jobs:
             echo "update_type=metadata_only" >> $GITHUB_OUTPUT
           fi
 
+      # Push directly to main if only metadata changed (no new images)
+      - name: Push metadata changes directly
+        if: steps.changes.outputs.has_changes == 'true' && steps.summary.outputs.update_type == 'metadata_only'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git commit -m "chore: Update background metadata"
+          git push
+
+      # Create PR only if there are new images
       - name: Create Pull Request
-        if: steps.changes.outputs.has_changes == 'true'
+        if: steps.changes.outputs.has_changes == 'true' && steps.summary.outputs.update_type == 'new_backgrounds'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: ${{ steps.summary.outputs.commit_message }}
           title: ${{ steps.summary.outputs.pr_title }}
           body: |
-            ## Background Update
+            ## New Backgrounds Detected
+            
+            This PR adds newly discovered Linux Mint backgrounds from the official package repository.
             
             **Summary:**
             - New images added: ${{ steps.summary.outputs.new_images }}
             - Packages: ${{ steps.summary.outputs.updated_packages }}
             
             **Review:**
+            - Check the `mint-backgrounds/` directory for new wallpapers
             - Check `versions.json` has been updated correctly
             
             ---
