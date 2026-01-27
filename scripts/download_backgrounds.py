@@ -368,8 +368,8 @@ if __name__ == "__main__":
             sys.exit(0)
         else:
             print("No updates")
-            sys.exit(1)
+            sys.exit(0)
     else:
         # Check and download
         had_updates = check_and_download()
-        sys.exit(0 if had_updates else 1)
+        sys.exit(0)
